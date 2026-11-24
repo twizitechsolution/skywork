@@ -1,0 +1,1048 @@
+{
+  "dbData": {
+    "users": [
+      {
+        "inr_balance": 100,
+        "yesterday_profit": 0,
+        "mobile": "9999999999",
+        "created_at": "2026-09-24T00:00:00.000Z",
+        "uid": "M100001",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": "1234",
+        "total_earnings": 100,
+        "parent_id": null,
+        "password_hash": ".AHjQx61P0MMT6j.FaL2a0EguM8/z8Qq",
+        "id": 1,
+        "today_profit": 100,
+        "usdt_balance": 0,
+        "username": "Super Admin",
+        "ref_code": "tp3340vnxr"
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "7790098808",
+        "created_at": "2026-09-25T19:22:17.019Z",
+        "ref_code": "tpzepr20rn",
+        "uid": "M124867",
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 3,
+        "password_hash": "$2a$10$iAivCjxxob9yPMsP8cYH8OCOsRMkb98gB29LgQ4utfxwKxeVsRoA.",
+        "id": 10,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "is_blocked": false,
+        "username": "SkyWork_M124867"
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "7015360880",
+        "created_at": "2026-09-26T02:32:40.260Z",
+        "ref_code": "tpmw2mouev",
+        "uid": "M765596",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "total_earnings": 0,
+        "parent_id": 4,
+        "password_hash": "$2a$10$036PKKEcZtmT0cJOQEb3R.6E0RIsw/yy0tYfFMsS2t0TBWavb2xh2",
+        "id": 11,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M765596",
+        "fcm_tokens": [
+          "d0EU_9ixTlCSuakY6RAAzQ:APA91bEA8GW8CaLSOPr4ViyYQqQqICiIItxJvF57FF3Ul8twQzjwSoabSt93PZeeRu7IhSTTaOaDfHQTkMEvTsKx2KlA1LrD6HoMGxXSwDsTpZCIUTejzFw"
+        ],
+        "pin": "2580"
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "9588598841",
+        "created_at": "2026-09-26T06:45:50.949Z",
+        "ref_code": "tpyaolxaqy",
+        "uid": "M714421",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 4,
+        "password_hash": "$2a$10$VoQqHrylvnlxpPBg0b9au.r/L4EbKjcdciIjYTbjz6u4Ji5562zQS",
+        "id": 13,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M714421",
+        "fcm_tokens": [
+          "d_f1kUnHQt2RCCHLSxhgOY:APA91bH4L8gkfLfKtnlpDz6Ye_450iYKq5KVYEFKZT7XD2HT5SyRVsHdjSxtBQjCQnMjIIttl7gti-qyFT27CMxYGxih0tf4dwbcNbHV5LRQcXnD9IV18mM"
+        ]
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "8708783050",
+        "created_at": "2026-09-26T07:03:49.885Z",
+        "ref_code": "tpiil0q0m1",
+        "uid": "M197759",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 8,
+        "password_hash": "$2a$10$VAJrW1SI1B6zBVppAaAgc.ld8GQVkURDUAeUPlzCen.g1FDFpkIiq",
+        "id": 14,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M197759"
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "9509266455",
+        "created_at": "2026-09-26T08:49:11.243Z",
+        "ref_code": "tpirgzj8pw",
+        "uid": "M907285",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 8,
+        "password_hash": "$2a$10$5.3rpkXr0O5wOJiWYxKth.aV9PPGRyEhujvwXFpgD.61kW6788Fgq",
+        "id": 15,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M907285",
+        "fcm_tokens": [
+          "cvEePo4oQqmntquIw4l3fl:APA91bGGBy3kwfWgurd6k8sv6cNLoN6Say4Q6Q_vfexqv73Hy61ZmOTSWdgkm-1FUegRcjCr7DZFdvz5Zic3ioi6Z1Lkl03q2fLgvPlg_YTauNYYnU9flYo"
+        ]
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "9518452727",
+        "created_at": "2026-09-27T11:58:58.130Z",
+        "ref_code": "tpblugc43c",
+        "uid": "M900975",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 8,
+        "password_hash": "$2a$10$SzIOhRT4hiSszdhRY.eoauL7mGdJNi7yP.S98vvWkk7LfLEFfCJzy",
+        "id": 17,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M900975"
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "9999990001",
+        "created_at": "2026-09-25T12:07:58.195Z",
+        "ref_code": "tpazr8xb0z",
+        "uid": "M376779",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 1,
+        "password_hash": "$2a$10$mVYehEwv1fkbE93w.i7XuOx6HtiStQ3Rt52qA/ZPv.o.JVvGyD7LC",
+        "id": 2,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M376779"
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "9610605774",
+        "created_at": "2026-10-01T10:44:47.810Z",
+        "ref_code": "tpnb6evtw9",
+        "uid": "M100331",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "total_earnings": 0,
+        "parent_id": 8,
+        "password_hash": "$2a$10$m064uSco6OZJ/H8QdEvceupFtJZM51Z5ZCvKSRNeQh088OE.B5JDa",
+        "id": 20,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M100331",
+        "fcm_tokens": [
+          "fiJiitWbTbegxpivwY0hWU:APA91bHqKiCHURZKW8GBOgzLk22STx9emrx0PvSwP2nHmux95ejMcHU76mrLNqYfKThAupK354CU-AH_ctrgEsGBCYs8ag_6uD9qW6uhxs0BpuxcfzpIe28"
+        ],
+        "pin": "9992"
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "8168571370",
+        "created_at": "2026-10-23T12:49:58.286Z",
+        "ref_code": "tpuj8870o1",
+        "uid": "M592847",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 8,
+        "password_hash": "$2a$10$rufWoK7YbyZR1nndcgq58uWVXmBUBeoktf6tuwfl6gRcyWb/80bka",
+        "id": 21,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M592847",
+        "fcm_tokens": [
+          "dHEI28q2Q2GDfDZzfABmdX:APA91bGNeIQ34fDvfnqzEtaPZzpKR-N5JUbEKrrIOukFopaEP7Ge5jkDH8J-sgU1-ky6noGGnaWdoRZC9_UaDi3Wc7Jpn_vOGjZMozaJKRvDSLQRNf_N8SA"
+        ]
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "9670696136",
+        "created_at": "2026-11-12T22:50:54.844Z",
+        "ref_code": "tpt313wows",
+        "uid": "M418138",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "total_earnings": 0,
+        "parent_id": 8,
+        "id": 23,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M418138",
+        "password_hash": "$2a$10$bni/cSF37DzWtpSON5gQ2uMo3.wZqV3DNeuXZWN6fS2hLWnI776MS",
+        "fcm_tokens": [
+          "fVAynglmRJyCnhlFNLVPyk:APA91bHDLaOmIJTFlCf3er_jwj5QaLRKrPuaEQA_04Zz4sAl8_mDS8y1a_NJ-lYoLIhOYWwqEWp2ypBugzrmwEK_hCzqyH7fmLmmg0ChqOcMy54yAdabxpY"
+        ],
+        "pin": "2292"
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "7013893165",
+        "created_at": "2026-09-25T12:22:57.492Z",
+        "ref_code": "tpoi83xva7",
+        "uid": "M695674",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 1,
+        "password_hash": "$2a$10$in2Yvxp/Fo/YTyZN7Abk8OXraivppL64sIX92jLfGwaygk0xVimNS",
+        "id": 3,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M695674",
+        "fcm_tokens": [
+          "c-1I1IO3TUSD7ntHg0ASbg:APA91bGCDzABR0YbEA4i9EBiN6Qz-BjGNfvyebI4JOaIzNA2m-wtCaa5YPMQpNrBYP6bDMcpsrclRyR0SD_ksP2wQ9J6tl1rX0NnYajBzm38WwHVkEuSif4"
+        ]
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "7419231971",
+        "created_at": "2026-09-25T13:24:40.523Z",
+        "ref_code": "tp93afl8gb",
+        "uid": "M655232",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 1,
+        "password_hash": "$2a$10$Ga3tQlr/3prHV6gM5g2iO.oMJgsX7mHKPWuar41ehCf87U4KwRz0q",
+        "id": 4,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M655232",
+        "fcm_tokens": [
+          "eMU_QLWUQyW1s0eRG6sQwh:APA91bEeNOb_hesqnjk5XAJ1duK4alkxOtJiyZo40zPllwVDylGH_4Aw_yHjqcnNSta-iOytWcrNizzwcncEP3ecIoWZ8Q8TRH-o0AuD9fuCWFvFVNz92YU"
+        ]
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "9053445519",
+        "created_at": "2026-09-25T16:55:26.037Z",
+        "ref_code": "tps6e6cpj5",
+        "uid": "M982132",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 1,
+        "password_hash": "$2a$10$a9cYRIZI7czBJ7sIIGYjeuutzwcG/YWRNNmCMHkWDnccSTKhT8ERS",
+        "id": 8,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M982132",
+        "fcm_tokens": [
+          "eMU_QLWUQyW1s0eRG6sQwh:APA91bEeNOb_hesqnjk5XAJ1duK4alkxOtJiyZo40zPllwVDylGH_4Aw_yHjqcnNSta-iOytWcrNizzwcncEP3ecIoWZ8Q8TRH-o0AuD9fuCWFvFVNz92YU",
+          "cxHDMZgMQC6EnrTpEmQufc:APA91bHQlgjaeK8m3XD5c4kVLJaJZFeazbVYY7GmdqH1eZrYHFKDG3Do_hr5IjT1AlTH32RYfshpExxRRDr9TYiPtQVC7U5icgLaP2VAOPSdFaL2GscirSM"
+        ]
+      },
+      {
+        "inr_balance": 0,
+        "yesterday_profit": 0,
+        "mobile": "8168418234",
+        "created_at": "2026-09-25T19:21:48.062Z",
+        "ref_code": "tp629jj7b1",
+        "uid": "M838284",
+        "is_blocked": false,
+        "bcoin_balance": 0,
+        "pin": null,
+        "total_earnings": 0,
+        "parent_id": 1,
+        "password_hash": "$2a$10$SJ0Jju7N9ZUKbpZ9clHzoOAe3YCXJ47Nz2aSV7QZMWzOwc75kbOMW",
+        "id": 9,
+        "today_profit": 0,
+        "usdt_balance": 0,
+        "username": "SkyWork_M838284"
+      }
+    ],
+    "orders": [],
+    "bank_accounts": [
+      {
+        "ifsc_code": "SBIN0031431",
+        "account_number": "44238392320",
+        "user_id": 8,
+        "account_holder": "Master mahender singh",
+        "bank_name": "State Bank of India",
+        "created_at": "2026-09-26T18:28:04.564Z",
+        "id": 2,
+        "upi_id": "mamtabijarnia7-2@okhdfcbank",
+        "status": "Active"
+      },
+      {
+        "ifsc_code": "SBIN0010457",
+        "account_number": "34014035334",
+        "user_id": 20,
+        "account_holder": "34014035334",
+        "bank_name": "State Bank of India",
+        "created_at": "2026-10-01T10:47:45.118Z",
+        "id": 3,
+        "upi_id": "9610605774@axl",
+        "status": "Active"
+      }
+    ],
+    "transactions": [],
+    "user_tasks": [
+      {
+        "user_id": 14,
+        "claimed": 0,
+        "task_key": 14,
+        "created_at": "2026-09-26T07:03:49.895Z",
+        "completed": 14,
+        "id": 10
+      },
+      {
+        "user_id": 15,
+        "claimed": 0,
+        "task_key": 15,
+        "created_at": "2026-09-26T08:49:11.254Z",
+        "completed": 15,
+        "id": 11
+      },
+      {
+        "user_id": 17,
+        "claimed": 0,
+        "task_key": 17,
+        "created_at": "2026-09-27T11:58:58.140Z",
+        "completed": 17,
+        "id": 13
+      },
+      {
+        "user_id": 20,
+        "claimed": 0,
+        "task_key": 20,
+        "created_at": "2026-10-01T10:44:47.827Z",
+        "completed": 20,
+        "id": 14
+      },
+      {
+        "user_id": 21,
+        "claimed": 0,
+        "task_key": 21,
+        "created_at": "2026-10-23T12:49:58.296Z",
+        "completed": 21,
+        "id": 15
+      },
+      {
+        "user_id": 23,
+        "claimed": 0,
+        "task_key": 23,
+        "created_at": "2026-11-12T22:50:54.855Z",
+        "completed": 23,
+        "id": 16
+      },
+      {
+        "user_id": 3,
+        "claimed": 0,
+        "task_key": 3,
+        "created_at": "2026-09-25T12:22:57.502Z",
+        "completed": 3,
+        "id": 3
+      },
+      {
+        "claimed": 0,
+        "id": 6,
+        "user_id": 9,
+        "task_key": 9,
+        "created_at": "2026-09-25T19:21:48.070Z",
+        "completed": 9
+      },
+      {
+        "user_id": 10,
+        "claimed": 0,
+        "task_key": 10,
+        "created_at": "2026-09-25T19:22:17.019Z",
+        "completed": 10,
+        "id": 7
+      },
+      {
+        "user_id": 11,
+        "claimed": 0,
+        "task_key": 11,
+        "created_at": "2026-09-26T02:32:40.270Z",
+        "completed": 11,
+        "id": 8
+      },
+      {
+        "user_id": 13,
+        "claimed": 0,
+        "task_key": 13,
+        "created_at": "2026-09-26T06:45:50.960Z",
+        "completed": 13,
+        "id": 9
+      }
+    ],
+    "messages": [
+      {
+        "created_at": "2026-09-24T10:12:52.134Z",
+        "id": 1,
+        "title": "Welcome to Sky Work!",
+        "content": "Welcome to your premium investment platform. Start exploring daily plans now!"
+      },
+      {
+        "created_at": "2026-09-24T11:12:52.138Z",
+        "id": 2,
+        "title": "System Maintenance Scheduled",
+        "content": "Our servers will undergo scheduled optimization on Sunday at 02:00 AM IST. Platforms will remain online."
+      }
+    ],
+    "withdrawals": [],
+    "disputes": [],
+    "settings": {
+      "winpey_api_secret": "fc4a56a2439f47c19213c747ee5693c6",
+      "history_split_repaired": true,
+      "payment_mode": "manual",
+      "orders_repaired_v2": true,
+      "winpey_api_key": "488b923c-2b03-465e-b9df-55d018124e0c",
+      "telegram_link": "https://t.me/SkyWork",
+      "upi_ids": "",
+      "level1_commission": 5,
+      "level2_commission": 2.5,
+      "level3_commission": 2
+    },
+    "products": [
+      {
+        "id": 82,
+        "created_at": "2026-09-24T20:38:40.733Z",
+        "name": "Auto-849",
+        "amount": 849,
+        "income": 92.9,
+        "quota": 941.9,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 83,
+        "created_at": "2026-09-24T20:40:40.733Z",
+        "name": "Auto-895",
+        "amount": 895,
+        "income": 97.5,
+        "quota": 992.5,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 84,
+        "created_at": "2026-09-24T20:40:40.733Z",
+        "name": "Auto-11791",
+        "amount": 11791,
+        "income": 1187.1,
+        "quota": 12978.1,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 85,
+        "created_at": "2026-09-24T20:40:40.734Z",
+        "name": "Auto-701",
+        "amount": 701,
+        "income": 78.1,
+        "quota": 779.1,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 86,
+        "created_at": "2026-09-24T20:42:40.741Z",
+        "name": "Auto-4153",
+        "amount": 4153,
+        "income": 423.3,
+        "quota": 4576.3,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 87,
+        "created_at": "2026-09-24T20:42:40.741Z",
+        "name": "Auto-51568",
+        "amount": 51568,
+        "income": 5164.8,
+        "quota": 56732.8,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 88,
+        "created_at": "2026-09-24T20:44:40.733Z",
+        "name": "Auto-12435",
+        "amount": 12435,
+        "income": 1251.5,
+        "quota": 13686.5,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 89,
+        "created_at": "2026-09-24T20:44:40.735Z",
+        "name": "Auto-383",
+        "amount": 383,
+        "income": 46.3,
+        "quota": 429.3,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 90,
+        "created_at": "2026-09-24T20:44:40.736Z",
+        "name": "Auto-3017",
+        "amount": 3017,
+        "income": 309.7,
+        "quota": 3326.7,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 91,
+        "created_at": "2026-09-24T20:46:40.742Z",
+        "name": "Auto-239",
+        "amount": 239,
+        "income": 31.9,
+        "quota": 270.9,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 92,
+        "created_at": "2026-09-24T20:46:40.743Z",
+        "name": "Auto-202",
+        "amount": 202,
+        "income": 28.2,
+        "quota": 230.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 93,
+        "created_at": "2026-09-24T20:48:40.739Z",
+        "name": "Auto-104732",
+        "amount": 104732,
+        "income": 10481.2,
+        "quota": 115213.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 94,
+        "created_at": "2026-09-24T20:48:40.746Z",
+        "name": "Auto-262",
+        "amount": 262,
+        "income": 34.2,
+        "quota": 296.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 95,
+        "created_at": "2026-09-24T20:48:40.746Z",
+        "name": "Auto-76551",
+        "amount": 76551,
+        "income": 7663.1,
+        "quota": 84214.1,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 96,
+        "created_at": "2026-09-24T20:50:40.749Z",
+        "name": "Auto-149084",
+        "amount": 149084,
+        "income": 14916.4,
+        "quota": 164000.4,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 97,
+        "created_at": "2026-09-24T20:50:40.749Z",
+        "name": "Auto-60149",
+        "amount": 60149,
+        "income": 6022.9,
+        "quota": 66171.9,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 98,
+        "created_at": "2026-11-22T20:36:35.739Z",
+        "name": "Auto-281",
+        "amount": 281,
+        "income": 36.1,
+        "quota": 317.1,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 99,
+        "created_at": "2026-11-22T20:36:35.759Z",
+        "name": "Auto-104722",
+        "amount": 104722,
+        "income": 10480.2,
+        "quota": 115202.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 100,
+        "created_at": "2026-11-22T20:38:35.766Z",
+        "name": "Auto-104812",
+        "amount": 104812,
+        "income": 10489.2,
+        "quota": 115301.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 101,
+        "created_at": "2026-11-22T20:38:35.768Z",
+        "name": "Auto-23275",
+        "amount": 23275,
+        "income": 2335.5,
+        "quota": 25610.5,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 102,
+        "created_at": "2026-11-22T20:40:35.760Z",
+        "name": "Auto-3148",
+        "amount": 3148,
+        "income": 322.8,
+        "quota": 3470.8,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 103,
+        "created_at": "2026-11-22T20:40:35.765Z",
+        "name": "Auto-417",
+        "amount": 417,
+        "income": 49.7,
+        "quota": 466.7,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 104,
+        "created_at": "2026-11-22T20:46:42.275Z",
+        "name": "Auto-69720",
+        "amount": 69720,
+        "income": 6980,
+        "quota": 76700,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 105,
+        "created_at": "2026-11-22T20:46:42.277Z",
+        "name": "Auto-133154",
+        "amount": 133154,
+        "income": 13323.4,
+        "quota": 146477.4,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 106,
+        "created_at": "2026-11-22T20:48:42.240Z",
+        "name": "Auto-153017",
+        "amount": 153017,
+        "income": 15309.7,
+        "quota": 168326.7,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 107,
+        "created_at": "2026-11-22T20:48:42.249Z",
+        "name": "Auto-15712",
+        "amount": 15712,
+        "income": 1579.2,
+        "quota": 17291.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 108,
+        "created_at": "2026-11-22T20:48:42.250Z",
+        "name": "Auto-187369",
+        "amount": 187369,
+        "income": 18744.9,
+        "quota": 206113.9,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 109,
+        "created_at": "2026-11-22T20:50:42.260Z",
+        "name": "Auto-895",
+        "amount": 895,
+        "income": 97.5,
+        "quota": 992.5,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 110,
+        "created_at": "2026-11-22T20:50:42.261Z",
+        "name": "Auto-616",
+        "amount": 616,
+        "income": 69.6,
+        "quota": 685.6,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 111,
+        "created_at": "2026-11-22T20:50:42.263Z",
+        "name": "Auto-86732",
+        "amount": 86732,
+        "income": 8681.2,
+        "quota": 95413.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 112,
+        "created_at": "2026-11-22T20:52:42.265Z",
+        "name": "Auto-423",
+        "amount": 423,
+        "income": 50.3,
+        "quota": 473.3,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 113,
+        "created_at": "2026-11-22T20:52:42.266Z",
+        "name": "Auto-496",
+        "amount": 496,
+        "income": 57.6,
+        "quota": 553.6,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 114,
+        "created_at": "2026-11-22T20:54:42.254Z",
+        "name": "Auto-2657",
+        "amount": 2657,
+        "income": 273.7,
+        "quota": 2930.7,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 115,
+        "created_at": "2026-11-22T20:54:42.260Z",
+        "name": "Auto-474",
+        "amount": 474,
+        "income": 55.4,
+        "quota": 529.4,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 116,
+        "created_at": "2026-11-22T20:54:42.261Z",
+        "name": "Auto-303",
+        "amount": 303,
+        "income": 38.3,
+        "quota": 341.3,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 117,
+        "created_at": "2026-11-22T20:56:42.266Z",
+        "name": "Auto-2951",
+        "amount": 2951,
+        "income": 303.1,
+        "quota": 3254.1,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 118,
+        "created_at": "2026-11-22T20:56:42.267Z",
+        "name": "Auto-86673",
+        "amount": 86673,
+        "income": 8675.3,
+        "quota": 95348.3,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 119,
+        "created_at": "2026-11-22T20:58:42.266Z",
+        "name": "Auto-22522",
+        "amount": 22522,
+        "income": 2260.2,
+        "quota": 24782.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 120,
+        "created_at": "2026-11-22T20:58:42.271Z",
+        "name": "Auto-19531",
+        "amount": 19531,
+        "income": 1961.1,
+        "quota": 21492.1,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 121,
+        "created_at": "2026-11-22T20:58:42.273Z",
+        "name": "Auto-1202",
+        "amount": 1202,
+        "income": 128.2,
+        "quota": 1330.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 122,
+        "created_at": "2026-11-22T21:00:42.286Z",
+        "name": "Auto-51051",
+        "amount": 51051,
+        "income": 5113.1,
+        "quota": 56164.1,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 123,
+        "created_at": "2026-11-22T21:00:42.287Z",
+        "name": "Auto-346",
+        "amount": 346,
+        "income": 42.6,
+        "quota": 388.6,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 124,
+        "created_at": "2026-11-22T21:00:42.289Z",
+        "name": "Auto-3815",
+        "amount": 3815,
+        "income": 389.5,
+        "quota": 4204.5,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 125,
+        "created_at": "2026-11-22T21:02:42.335Z",
+        "name": "Auto-132219",
+        "amount": 132219,
+        "income": 13229.9,
+        "quota": 145448.9,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 126,
+        "created_at": "2026-11-22T21:02:42.341Z",
+        "name": "Auto-520",
+        "amount": 520,
+        "income": 60,
+        "quota": 580,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 127,
+        "created_at": "2026-11-22T21:04:42.281Z",
+        "name": "Auto-834",
+        "amount": 834,
+        "income": 91.4,
+        "quota": 925.4,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 128,
+        "created_at": "2026-11-22T21:04:42.298Z",
+        "name": "Auto-470",
+        "amount": 470,
+        "income": 55,
+        "quota": 525,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 129,
+        "created_at": "2026-11-22T21:06:42.354Z",
+        "name": "Auto-1381",
+        "amount": 1381,
+        "income": 146.1,
+        "quota": 1527.1,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 130,
+        "created_at": "2026-11-22T21:06:42.360Z",
+        "name": "Auto-198862",
+        "amount": 198862,
+        "income": 19894.2,
+        "quota": 218756.2,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      },
+      {
+        "id": 131,
+        "created_at": "2026-11-22T21:06:42.368Z",
+        "name": "Auto-110649",
+        "amount": 110649,
+        "income": 11072.9,
+        "quota": 121721.9,
+        "color": "blue",
+        "type": "Bank",
+        "percent": "10%+8"
+      }
+    ],
+    "price_ranges": [
+      {
+        "id": 1,
+        "label": "ALL",
+        "min_val": 0,
+        "max_val": 99999999,
+        "created_at": "2026-08-07T15:51:48.103Z"
+      },
+      {
+        "id": 3,
+        "label": "500 - 1000",
+        "min_val": 500,
+        "max_val": 1000,
+        "created_at": "2026-08-07T15:51:48.103Z"
+      },
+      {
+        "id": 4,
+        "label": "1000 - 5000",
+        "min_val": 1000,
+        "max_val": 5000,
+        "created_at": "2026-08-07T15:51:48.103Z"
+      },
+      {
+        "id": 5,
+        "label": "5000+",
+        "min_val": 5000,
+        "max_val": 99999999,
+        "created_at": "2026-08-07T15:51:48.103Z"
+      }
+    ],
+    "sliders": [],
+    "admin": {
+      "password": "123456",
+      "username": "admin"
+    }
+  },
+  "idTrackers": {
+    "price_ranges": 4,
+    "orders": 1000,
+    "sliders": 1,
+    "transactions": 1,
+    "disputes": 1,
+    "withdrawals": 1,
+    "messages": 2,
+    "bank_accounts": 3,
+    "users": 23,
+    "user_tasks": 16,
+    "products": 131
+  }
+}

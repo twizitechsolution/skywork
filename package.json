@@ -1,0 +1,19 @@
+{
+  "name": "skywork-platform",
+  "version": "1.0.0",
+  "description": "Sky Work Platform - Complete Backend, Admin Dashboard, User Web App & APK",
+  "scripts": {
+    "start": "node dev_server.js",
+    "dev": "node dev_server.js",
+    "backend": "cd backend && node src/server.js"
+  },
+  "keywords": [
+    "skywork",
+    "investment-platform",
+    "admin-dashboard",
+    "capacitor",
+    "apk"
+  ],
+  "author": "",
+  "license": "ISC"
+}
