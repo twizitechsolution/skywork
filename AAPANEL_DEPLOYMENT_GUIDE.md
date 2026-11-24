@@ -49,6 +49,29 @@ chmod -R 755 /www/wwwroot/skywork
 
 ---
 
+## 🗄️ Step 2.5: Setup Dedicated MySQL Database in aaPanel
+
+All user accounts, balances, orders, transactions, products, withdrawals, and admin data are stored directly in your dedicated **MySQL** database (Firebase is used **only** for push notifications).
+
+1. In aaPanel, go to **Databases** > **Add DB**.
+2. Fill in:
+   - **Database name**: `skywork`
+   - **Username**: `skywork`
+   - **Password**: Copy the generated password (or set your own).
+   - **Access permission**: `Local server (127.0.0.1)`
+3. Click **Submit**.
+4. Update `/www/wwwroot/skywork/backend/.env` with your MySQL credentials:
+   ```env
+   MYSQL_HOST=127.0.0.1
+   MYSQL_PORT=3306
+   MYSQL_USER=skywork
+   MYSQL_PASSWORD=YOUR_MYSQL_PASSWORD
+   MYSQL_DATABASE=skywork
+   ```
+   *(When the backend starts, it will automatically create all 14 MySQL tables and seed the starter admin, super admin, and 51 product plans! You can also manage/view everything in phpMyAdmin).*
+
+---
+
 ## ⚙️ Step 3: Setup & Launch Backend API (Port 5000)
 
 ### Method A: Via aaPanel Node.js Project Manager (Recommended GUI)

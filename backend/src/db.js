@@ -48,20 +48,19 @@ let idTrackers = {
   disputes: 0
 };
 
-// Save helper with Firebase Cloud synchronization
+// Save helper with dedicated MySQL synchronization
 function saveDb() {
   try {
     fs.writeFileSync(dbPath, JSON.stringify({ dbData, idTrackers }, null, 2), 'utf8');
   } catch (err) {
-    // Non-blocking fallback for read-only environments like Vercel Serverless
-    // console.warn('[DB] Local filesystem write skipped or read-only:', err.message);
+    // Non-blocking fallback for read-only environments
   }
 
   try {
-    const { syncToFirestore, isFirebaseConnected } = require('./firebase');
-    if (isFirebaseConnected()) {
-      syncToFirestore(dbData, idTrackers).catch(err => {
-        console.error('[DB] Background Firestore sync error:', err.message);
+    const { syncToMysql, isMysqlConnected } = require('./mysql');
+    if (isMysqlConnected()) {
+      syncToMysql(dbData, idTrackers).catch(err => {
+        console.error('[DB] Background MySQL sync error:', err.message);
       });
     }
   } catch (err) {
@@ -1097,28 +1096,29 @@ const query = {
 async function initDb() {
   loadDb();
 
-  // Connect & Sync with Firebase Firestore Cloud Database
+  // Connect & Sync with Dedicated MySQL Database
   try {
-    const { isFirebaseConnected, loadFromFirestore, syncToFirestore } = require('./firebase');
-    if (isFirebaseConnected()) {
-      console.log('[DB] Connecting to Firebase Firestore Cloud Database...');
-      const cloudState = await loadFromFirestore();
-      if (cloudState && cloudState.dbData && cloudState.dbData.users && cloudState.dbData.users.length > 0) {
+    const { initMysql, isMysqlConnected, loadFromMysql, syncToMysql } = require('./mysql');
+    await initMysql();
+    if (isMysqlConnected()) {
+      console.log('[DB] Connecting to Dedicated MySQL Database...');
+      const mysqlState = await loadFromMysql();
+      if (mysqlState && mysqlState.dbData && mysqlState.dbData.users && mysqlState.dbData.users.length > 0) {
         for (let key in dbData) delete dbData[key];
-        Object.assign(dbData, cloudState.dbData);
-        if (cloudState.idTrackers) {
+        Object.assign(dbData, mysqlState.dbData);
+        if (mysqlState.idTrackers) {
           for (let key in idTrackers) delete idTrackers[key];
-          Object.assign(idTrackers, cloudState.idTrackers);
+          Object.assign(idTrackers, mysqlState.idTrackers);
         }
-        console.log('[DB] Active database state synced from Firebase Firestore Cloud.');
+        console.log('[DB] Active database state loaded from MySQL.');
       } else {
-        console.log('[DB] Uploading clean starter database to Firebase Firestore Cloud...');
-        await syncToFirestore(dbData, idTrackers);
-        console.log('[DB] Initial seeding to Firebase Firestore complete.');
+        console.log('[DB] Seeding starter database into MySQL...');
+        await syncToMysql(dbData, idTrackers);
+        console.log('[DB] Initial seeding to MySQL complete.');
       }
     }
   } catch (err) {
-    console.error('[DB] Error connecting to Firebase Firestore sync:', err.message);
+    console.error('[DB] Error connecting to MySQL:', err.message);
   }
 
   // Initialize arrays to prevent runtime errors
