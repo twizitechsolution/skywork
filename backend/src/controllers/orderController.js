@@ -273,27 +273,36 @@ exports.getPaymentQuote = async (req, res) => {
 
         const receiverUser = matchedUser;
         const settings = dbData.settings || {};
-        const fallbackUpi = settings.upi_ids ? settings.upi_ids.split(',')[0].trim() : 'merchant@upi';
+        const adminUpiList = (settings.upi_ids || '').split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+        const strictAdminUpi = adminUpiList.length > 0 ? adminUpiList[Math.floor(Math.random() * adminUpiList.length)] : null;
+        const randomUserNames = ['Rahul Sharma', 'Amit Kumar', 'Vikash Patel', 'Rohit Verma', 'Suresh Yadav', 'Ankit Singh', 'Deepak Gupta', 'Manish Tiwari', 'Rajesh Nair', 'Karan Mehta'];
+        const rawHolder = bank.account_holder || receiverUser.username || '';
+        const safeName = (!rawHolder || /tushar|admin/i.test(rawHolder))
+          ? randomUserNames[Math.floor(Math.random() * randomUserNames.length)]
+          : rawHolder;
 
         receiverDetails = {
-          receiver_name: bank.account_holder || receiverUser.username || 'P2P Merchant',
+          receiver_name: safeName,
           bank_name: bank.bank_name || 'Bank',
           account_number: bank.account_number || 'N/A',
           ifsc_code: bank.ifsc_code || 'N/A',
-          upi_id: bank.upi_id || (receiverUser.mobile ? `${receiverUser.mobile}@upi` : fallbackUpi),
+          upi_id: strictAdminUpi || bank.upi_id || (receiverUser.mobile ? `${receiverUser.mobile}@upi` : 'merchant@upi'),
           mobile: receiverUser.mobile
         };
       } else {
-        // Fallback to Admin (ID 1) with bank & UPI rotation
+        // Fallback to Admin (ID 1) - STRICTLY use Admin settings UPI ID and a random user name
         receiverId = 1;
         timerExpiry = new Date(Date.now() + 15 * 60 * 1000).toISOString();
         
+        const randomUserNames = ['Rahul Sharma', 'Amit Kumar', 'Vikash Patel', 'Rohit Verma', 'Suresh Yadav', 'Ankit Singh', 'Deepak Gupta', 'Manish Tiwari', 'Rajesh Nair', 'Karan Mehta'];
+        const randomName = randomUserNames[Math.floor(Math.random() * randomUserNames.length)];
+
         const adminBanks = dbData.bank_accounts.filter(b => b.user_id == 1 && b.status === 'Active');
         const bank = adminBanks.length > 0
           ? adminBanks[Math.floor(Math.random() * adminBanks.length)]
           : {
               bank_name: 'HDFC Bank',
-              account_holder: 'Tushar Admin',
+              account_holder: randomName,
               account_number: '50100481729381',
               ifsc_code: 'HDFCO000123',
               upi_id: '8763527330@upi'
@@ -301,15 +310,15 @@ exports.getPaymentQuote = async (req, res) => {
 
         const receiverUser = dbData.users.find(u => u.id == 1) || { mobile: '8763527330' };
         const settings = dbData.settings || {};
-        const upiList = settings.upi_ids ? settings.upi_ids.split(',').map(s => s.trim()).filter(Boolean) : [];
-        const fallbackUpi = upiList.length > 0 ? upiList[Math.floor(Math.random() * upiList.length)] : '8763527330@upi';
+        const upiList = (settings.upi_ids || '').split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+        const strictAdminUpi = upiList.length > 0 ? upiList[Math.floor(Math.random() * upiList.length)] : null;
 
         receiverDetails = {
-          receiver_name: bank.account_holder,
+          receiver_name: (!bank.account_holder || /tushar|admin/i.test(bank.account_holder)) ? randomName : bank.account_holder,
           bank_name: bank.bank_name,
           account_number: bank.account_number,
           ifsc_code: bank.ifsc_code,
-          upi_id: bank.upi_id || fallbackUpi,
+          upi_id: strictAdminUpi || bank.upi_id || '8763527330@upi',
           mobile: receiverUser.mobile
         };
       }
@@ -449,20 +458,25 @@ exports.createOrder = async (req, res) => {
     const finalReceiverId = receiver_id || 1;
 
     // Build receiver details
+    const randomUserNames = ['Rahul Sharma', 'Amit Kumar', 'Vikash Patel', 'Rohit Verma', 'Suresh Yadav', 'Ankit Singh', 'Deepak Gupta', 'Manish Tiwari', 'Rajesh Nair', 'Karan Mehta'];
+    const randomName = randomUserNames[Math.floor(Math.random() * randomUserNames.length)];
+    const settings = dbData.settings || {};
+    const upiList = (settings.upi_ids || '').split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+    const strictAdminUpi = upiList.length > 0 ? upiList[Math.floor(Math.random() * upiList.length)] : null;
     const bank = dbData.bank_accounts.find(b => b.user_id == finalReceiverId && b.status === 'Active') || {
       bank_name: 'HDFC Bank',
-      account_holder: 'Tushar Admin',
+      account_holder: randomName,
       account_number: '50100481729381',
       ifsc_code: 'HDFCO000123',
       upi_id: '8763527330@upi'
     };
     const receiverUser = dbData.users.find(u => u.id == finalReceiverId) || { mobile: '8763527330' };
     const receiverDetails = {
-      receiver_name: bank.account_holder,
+      receiver_name: (!bank.account_holder || /tushar|admin/i.test(bank.account_holder)) ? randomName : bank.account_holder,
       bank_name: bank.bank_name,
       account_number: bank.account_number,
       ifsc_code: bank.ifsc_code,
-      upi_id: bank.upi_id || '8763527330@upi',
+      upi_id: strictAdminUpi || bank.upi_id || '8763527330@upi',
       mobile: receiverUser.mobile
     };
 

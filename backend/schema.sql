@@ -145,6 +145,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `level2_commission` DECIMAL(8,2) DEFAULT 2.50,
   `level3_commission` DECIMAL(8,2) DEFAULT 2.00,
   `telegram_link` VARCHAR(255) DEFAULT 'https://t.me/SkyWork',
+  `proof_channel_link` VARCHAR(255) DEFAULT 'https://t.me/skyworkxcwdrl',
   `payment_mode` VARCHAR(32) DEFAULT 'manual',
   `upi_ids` TEXT DEFAULT NULL,
   `winpey_api_key` VARCHAR(255) DEFAULT NULL,

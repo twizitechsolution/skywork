@@ -400,7 +400,16 @@ app.get('/api/admin/orders', adminAuth, async (req, res) => {
       }
 
       const recId = order.receiver_id;
-      if (recId && recId != 1) {
+      const settings = dbData.settings || {};
+      const adminUpis = (settings.upi_ids || '').split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+      const strictAdminUpi = adminUpis.length > 0 ? adminUpis[0] : null;
+      if (order.receiver_details && order.receiver_details.upi_id) {
+        order.receiver_name = order.receiver_details.receiver_name || 'User Merchant';
+        order.receiver_bank = order.receiver_details.bank_name || 'Bank';
+        order.receiver_account = order.receiver_details.account_number || 'N/A';
+        order.receiver_upi = strictAdminUpi || order.receiver_details.upi_id;
+        order.receiver_mobile = order.receiver_details.mobile || 'N/A';
+      } else if (recId && recId != 1) {
         const receiverUser = (dbData.users || []).find(u => u.id == recId);
         const bankAcc = (dbData.bank_accounts || []).find(b => b.user_id == recId && b.status === 'Active') ||
                         (dbData.bank_accounts || []).find(b => b.user_id == recId);
@@ -409,14 +418,14 @@ app.get('/api/admin/orders', adminAuth, async (req, res) => {
         order.receiver_name = bankAcc ? bankAcc.account_holder : (receiverUser ? (receiverUser.username || 'P2P Seller') : 'P2P Seller');
         order.receiver_bank = bankAcc ? bankAcc.bank_name : 'Bank';
         order.receiver_account = bankAcc ? bankAcc.account_number : 'N/A';
-        order.receiver_upi = bankAcc ? bankAcc.upi_id : (receiverUser ? `${receiverUser.mobile}@upi` : 'N/A');
+        order.receiver_upi = strictAdminUpi || (bankAcc ? bankAcc.upi_id : (receiverUser ? `${receiverUser.mobile}@upi` : 'N/A'));
       } else {
         order.receiver_mobile = '8763527330';
         order.receiver_uid = 'M118248';
-        order.receiver_name = 'Tushar Admin';
+        order.receiver_name = 'Rahul Sharma';
         order.receiver_bank = 'HDFC Bank';
         order.receiver_account = '50100481729381';
-        order.receiver_upi = '8763527330@upi';
+        order.receiver_upi = strictAdminUpi || '8763527330@upi';
       }
     });
 
@@ -578,16 +587,17 @@ app.get('/api/admin/settings', adminAuth, async (req, res) => {
 
 app.post('/api/admin/settings', adminAuth, async (req, res) => {
   try {
-    const { level1_commission, level2_commission, level3_commission, telegram_link, winpey_api_key, winpey_api_secret, payment_mode, upi_ids } = req.body;
-    await query.run('UPDATE settings SET level1_commission = ?, level2_commission = ?, level3_commission = ?, telegram_link = ?, winpey_api_key = ?, winpey_api_secret = ?, payment_mode = ?, upi_ids = ?', [
+    const { level1_commission, level2_commission, level3_commission, telegram_link, proof_channel_link, winpey_api_key, winpey_api_secret, payment_mode, upi_ids } = req.body;
+    await query.run('UPDATE settings SET level1_commission = ?, level2_commission = ?, level3_commission = ?, telegram_link = ?, winpey_api_key = ?, winpey_api_secret = ?, payment_mode = ?, upi_ids = ?, proof_channel_link = ?', [
       Number(level1_commission || 0),
       Number(level2_commission || 0),
       Number(level3_commission || 0),
-      telegram_link || "https://t.me/Airwallex",
+      telegram_link || "https://t.me/SkyWork",
       winpey_api_key || "488b923c-2b03-465e-b9df-55d018124e0c",
       winpey_api_secret || "fc4a56a2439f47c19213c747ee5693c6",
       payment_mode || "gateway",
-      upi_ids || ""
+      upi_ids || "",
+      proof_channel_link || "https://t.me/skyworkxcwdrl"
     ]);
     return res.json({ success: true, message: 'Settings updated successfully!' });
   } catch (err) {

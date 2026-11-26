@@ -180,6 +180,7 @@ const TABLE_STATEMENTS = [
     \`level2_commission\` DECIMAL(8,2) DEFAULT 2.50,
     \`level3_commission\` DECIMAL(8,2) DEFAULT 2.00,
     \`telegram_link\` VARCHAR(255) DEFAULT 'https://t.me/SkyWork',
+    \`proof_channel_link\` VARCHAR(255) DEFAULT 'https://t.me/skyworkxcwdrl',
     \`payment_mode\` VARCHAR(32) DEFAULT 'manual',
     \`upi_ids\` TEXT DEFAULT NULL,
     \`winpey_api_key\` VARCHAR(255) DEFAULT NULL,
@@ -231,6 +232,12 @@ async function initMysql() {
     try {
       for (const stmt of TABLE_STATEMENTS) {
         await conn.query(stmt);
+      }
+      // Ensure proof_channel_link column exists on pre-existing tables
+      try {
+        await conn.query("ALTER TABLE `settings` ADD COLUMN `proof_channel_link` VARCHAR(255) DEFAULT 'https://t.me/skyworkxcwdrl'");
+      } catch (alterErr) {
+        // Ignore duplicate column error (ER_DUP_FIELDNAME)
       }
       mysqlConnected = true;
       console.log(`[MySQL] Connected to ${cfg.host}:${cfg.port}/${cfg.database} and verified all 14 tables.`);
@@ -422,6 +429,7 @@ async function loadFromMysql() {
         level2_commission: Number(settingsRows[0].level2_commission || 2.5),
         level3_commission: Number(settingsRows[0].level3_commission || 2),
         telegram_link: settingsRows[0].telegram_link,
+        proof_channel_link: settingsRows[0].proof_channel_link || 'https://t.me/skyworkxcwdrl',
         payment_mode: settingsRows[0].payment_mode,
         upi_ids: settingsRows[0].upi_ids || '',
         winpey_api_key: settingsRows[0].winpey_api_key,
@@ -636,13 +644,13 @@ async function syncToMysql(dbData, idTrackers) {
 
     // 12. Settings
     const s = dbData.settings || {};
-    const settingKnown = ['id', 'level1_commission', 'level2_commission', 'level3_commission', 'telegram_link', 'payment_mode', 'upi_ids', 'winpey_api_key', 'winpey_api_secret', 'orders_repaired_v2', 'history_split_repaired'];
+    const settingKnown = ['id', 'level1_commission', 'level2_commission', 'level3_commission', 'telegram_link', 'proof_channel_link', 'payment_mode', 'upi_ids', 'winpey_api_key', 'winpey_api_secret', 'orders_repaired_v2', 'history_split_repaired'];
     await conn.query(
-      `INSERT INTO \`settings\` (id, level1_commission, level2_commission, level3_commission, telegram_link, payment_mode, upi_ids, winpey_api_key, winpey_api_secret, orders_repaired_v2, history_split_repaired, extra_json)
-       VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `INSERT INTO \`settings\` (id, level1_commission, level2_commission, level3_commission, telegram_link, proof_channel_link, payment_mode, upi_ids, winpey_api_key, winpey_api_secret, orders_repaired_v2, history_split_repaired, extra_json)
+       VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
        ON DUPLICATE KEY UPDATE
        level1_commission=VALUES(level1_commission), level2_commission=VALUES(level2_commission), level3_commission=VALUES(level3_commission),
-       telegram_link=VALUES(telegram_link), payment_mode=VALUES(payment_mode), upi_ids=VALUES(upi_ids),
+       telegram_link=VALUES(telegram_link), proof_channel_link=VALUES(proof_channel_link), payment_mode=VALUES(payment_mode), upi_ids=VALUES(upi_ids),
        winpey_api_key=VALUES(winpey_api_key), winpey_api_secret=VALUES(winpey_api_secret),
        orders_repaired_v2=VALUES(orders_repaired_v2), history_split_repaired=VALUES(history_split_repaired), extra_json=VALUES(extra_json)`,
       [
@@ -650,6 +658,7 @@ async function syncToMysql(dbData, idTrackers) {
         Number(s.level2_commission ?? 2.5),
         Number(s.level3_commission ?? 2),
         s.telegram_link || 'https://t.me/SkyWork',
+        s.proof_channel_link || 'https://t.me/skyworkxcwdrl',
         s.payment_mode || 'manual',
         s.upi_ids || '',
         s.winpey_api_key || null,

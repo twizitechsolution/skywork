@@ -31,6 +31,7 @@ let dbData = {
     level2_commission: 5,
     level3_commission: 2,
     telegram_link: "https://t.me/SkyWork",
+    proof_channel_link: "https://t.me/skyworkxcwdrl",
     payment_mode: "gateway",
     upi_ids: ""
   }
@@ -300,6 +301,7 @@ function loadDb(force = false) {
         winpey_api_secret: "fc4a56a2439f47c19213c747ee5693c6"
       };
       if (dbData.settings.telegram_link === undefined) dbData.settings.telegram_link = "https://t.me/SkyWork";
+      if (dbData.settings.proof_channel_link === undefined) dbData.settings.proof_channel_link = "https://t.me/skyworkxcwdrl";
       if (!dbData.settings.winpey_api_key) dbData.settings.winpey_api_key = "488b923c-2b03-465e-b9df-55d018124e0c";
       if (!dbData.settings.winpey_api_secret) dbData.settings.winpey_api_secret = "fc4a56a2439f47c19213c747ee5693c6";
 
@@ -942,11 +944,12 @@ const query = {
           level1_commission: Number(params[0]),
           level2_commission: Number(params[1]),
           level3_commission: Number(params[2]),
-          telegram_link: params[3] !== undefined ? params[3] : (dbData.settings.telegram_link || "https://t.me/Airwallex"),
+          telegram_link: params[3] !== undefined ? params[3] : (dbData.settings.telegram_link || "https://t.me/SkyWork"),
           winpey_api_key: params[4] !== undefined ? params[4] : (dbData.settings.winpey_api_key || "488b923c-2b03-465e-b9df-55d018124e0c"),
           winpey_api_secret: params[5] !== undefined ? params[5] : (dbData.settings.winpey_api_secret || "fc4a56a2439f47c19213c747ee5693c6"),
           payment_mode: params[6] !== undefined ? params[6] : (dbData.settings.payment_mode || "gateway"),
-          upi_ids: params[7] !== undefined ? params[7] : (dbData.settings.upi_ids || "")
+          upi_ids: params[7] !== undefined ? params[7] : (dbData.settings.upi_ids || ""),
+          proof_channel_link: params[8] !== undefined ? params[8] : (dbData.settings.proof_channel_link || "https://t.me/skyworkxcwdrl")
         };
         changes = 1;
         saveDb();
